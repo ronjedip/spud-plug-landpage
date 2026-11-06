@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spud Plug | Loaded Baked Potatoes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bg-grid {
+      background-size: 30px 30px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-amber-50 text-stone-900 font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-200/60 px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-black tracking-tight text-amber-600">SPUD PLUG<span class="text-stone-800">.</span></div>
+    <div class="space-x-4">
+      <a href="#menu" class="text-sm font-semibold text-stone-700 hover:text-amber-600 transition">Menu</a>
+      <button onclick="openCateringModal()" class="text-sm font-bold bg-amber-500 text-stone-950 px-4 py-2 rounded-lg hover:bg-amber-400 transition shadow-sm">
+        Book Catering
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative px-6 py-20 max-w-5xl mx-auto text-center bg-grid rounded-3xl my-6 border border-amber-200/80 bg-white/40">
+    <span class="inline-block bg-amber-100 text-amber-800 font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+      Fast-Casual Loaded Potatoes
+    </span>
+    <h1 class="text-4xl sm:text-6xl font-black text-stone-950 tracking-tight leading-none mb-6">
+      HOT. LOADED. <br><span class="text-amber-600">PLUGGED IN.</span>
+    </h1>
+    <p class="text-lg text-stone-600 max-w-xl mx-auto mb-8 font-medium">
+      Slow-roasted baked potatoes piled high with premium toppings, house sauces, and unmatched flavor profiles.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#order-options" class="bg-stone-900 text-white font-bold px-8 py-3 rounded-xl hover:bg-stone-800 transition text-center shadow-md">
+        Order Daily Delivery
+      </a>
+      <button onclick="openCateringModal()" class="bg-amber-500 text-stone-950 font-bold px-8 py-3 rounded-xl hover:bg-amber-400 transition text-center shadow-md">
+        Inquire for Events
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Preview -->
+  <section id="menu" class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-black text-stone-950 mb-2">Signature Plugs</h2>
+    <p class="text-stone-600 mb-8 font-medium">Engineered for ultimate flavor depth and heat retention.</p>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <!-- Item 1 -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="bg-amber-100 w-full h-40 rounded-xl mb-4 flex items-center justify-center text-amber-700 font-black">
+            [SPUD PHOTO]
+          </div>
+          <h3 class="font-bold text-lg text-stone-900">The Classic Plug</h3>
+          <p class="text-stone-600 text-sm mt-1">Crispy skin jacket, aged cheddar melt, hickory smoked bacon bits, fresh chives, and signature sour cream.</p>
+        </div>
+        <div class="mt-6 font-black text-amber-600 text-lg">₱180</div>
+      </div>
+      <!-- Item 2 -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="bg-amber-100 w-full h-40 rounded-xl mb-4 flex items-center justify-center text-amber-700 font-black">
+            [SPUD PHOTO]
+          </div>
+          <h3 class="font-bold text-lg text-stone-900">Beef &amp; Cheese Overload</h3>
+          <p class="text-stone-600 text-sm mt-1">Slow-simmered savory beef topping, double-cream cheese sauce, roasted garlic crisp, and scallions.</p>
+        </div>
+        <div class="mt-6 font-black text-amber-600 text-lg">₱240</div>
+      </div>
+      <!-- Item 3 -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="bg-amber-100 w-full h-40 rounded-xl mb-4 flex items-center justify-center text-amber-700 font-black">
+            [SPUD PHOTO]
+          </div>
+          <h3 class="font-bold text-lg text-stone-900">Truffle &amp; Mushroom</h3>
+          <p class="text-stone-600 text-sm mt-1">Sautéed wild mushrooms, white truffle oil infusion, parmesan shavings, and black pepper crust.</p>
+        </div>
+        <div class="mt-6 font-black text-amber-600 text-lg">₱260</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Order Hub -->
+  <section id="order-options" class="max-w-5xl mx-auto px-6 py-12">
+    <div class="bg-stone-900 text-white rounded-3xl p-8 sm:p-12 text-center">
+      <h2 class="text-3xl font-black mb-4">Craving Spud Plug Right Now?</h2>
+      <p class="text-stone-400 max-w-md mx-auto mb-8 text-sm">Order directly through our partner delivery apps or send a direct order message to our team.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="bg-pink-600 text-white font-bold px-6 py-3 rounded-xl hover:bg-pink-500 transition">Order on foodpanda</a>
+        <a href="#" class="bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl hover:bg-emerald-500 transition">Order via GrabFood</a>
+        <a href="#" class="bg-stone-800 text-amber-400 border border-stone-700 font-bold px-6 py-3 rounded-xl hover:bg-stone-700 transition">Direct Messenger Order</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering Intake Modal -->
+  <div id="cateringModal" class="fixed inset-0 bg-stone-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white max-w-xl w-full rounded-3xl p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeCateringModal()" class="absolute top-6 right-6 text-stone-400 hover:text-stone-600 font-bold text-xl">&times;</button>
+      
+      <h3 class="text-2xl font-black text-stone-950 mb-1">Spud Plug Event Catering</h3>
+      <p class="text-stone-600 text-sm mb-6">Tell us about your event. We cater pop-ups, corporate sessions, and private celebrations.</p>
+
+      <form class="space-y-4" onsubmit="handleCateringSubmit(event)">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Full Name</label>
+            <input type="text" required class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Contact Number</label>
+            <input type="tel" required class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Target Event Date</label>
+            <input type="date" required class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Estimated Headcount</label>
+            <select required class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none bg-white">
+              <option value="">Select Range</option>
+              <option value="20-50">20 - 50 pax</option>
+              <option value="51-100">51 - 100 pax</option>
+              <option value="100+">100+ pax (Custom Setup)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Event Location / Venue</label>
+          <input type="text" placeholder="City or Area (e.g., Alabang, BGC)" required class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Additional Notes / Special Requests</label>
+          <textarea rows="3" class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none" placeholder="Setup preferences, dietary restrictions, time slot..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-amber-500 text-stone-950 font-black py-3 rounded-xl hover:bg-amber-400 transition">
+          Submit Catering Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openCateringModal() {
+      document.getElementById('cateringModal').classList.remove('hidden');
+    }
+    function closeCateringModal() {
+      document.getElementById('cateringModal').classList.add('hidden');
+    }
+    function handleCateringSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your catering inquiry has been received. Our team will contact you shortly.');
+      closeCateringModal();
+    }
+  </script>
+</body>
+</html>
